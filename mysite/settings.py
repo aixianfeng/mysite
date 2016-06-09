@@ -13,7 +13,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
 #        'NAME': '/var/www/mysite/mydata.db',                      # Or path to database file if using sqlite3.
-       	'NAME':'/home/axf/mysite/mysite/mydata.db',
+       	'NAME':'/home/axf/mysite/mydata.db',
 		 'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
