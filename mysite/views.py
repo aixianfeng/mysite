@@ -11,7 +11,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from books.models import Article
 from books.models import Tag
 import datetime
-from datetime import datetime
+#from datetime import datetime
 
 # Create your views here
 def home(request):
