@@ -1,0 +1,16 @@
+<style>
+.content {font-size:12px;}
+</style>
+
+<h2>Blog List</h2>
+<a href="/add/">Add</a>
+
+{% for article in articles %}
+<div>
+	<h3>Title: <a href="/view/{{article.id}}">{{article.title}}</a></h3>
+	<div class="content">
+		{{article.content}}
+	</div>
+</div>
+<hr>
+{% endfor %}

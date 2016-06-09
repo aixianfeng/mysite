@@ -1,0 +1,26 @@
+<style>
+h3 {padding-top: 20px}
+</style>
+
+<div>
+<h1>Title: <a href="/view/{{article.id}}">{{article.title}}
+</a></h1>
+<div class="content">
+	{{article.content}}
+</div>
+</div>
+<hr>
+
+<h3>comment</h3>
+{% for comment in comments %}
+<p>{{comment.detail}}</p>
+<hr>
+{% endfor %}
+
+<form action="/comment/add/" method="post">
+<p>Content: <textarea name="detail"></textarea></p>
+<input type="hidden" name="article" value="{{article.id}}">
+<p><input type="submit"></p>
+</form>
+
+<a href="/list">Return</a>

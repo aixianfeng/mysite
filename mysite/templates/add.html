@@ -1,0 +1,10 @@
+<form action="/add/" method="post">
+{% csrf_token %}
+access method: {{method_str}}
+
+<p>Title1: <input name="title" type="text"></p>
+<p>Content: <textarea name="content"></textarea></p>
+<p><input type="submit"></p>
+
+</form>
+

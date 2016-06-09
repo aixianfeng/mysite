@@ -13,20 +13,23 @@ class Tag(models.Model):
 
 class Article(models.Model):
 	title = models.CharField(max_length=100)
-	category = models.CharField(max_length=50, blank=True)
-	tag = models.ManyToManyField(Tag, blank=True)
-	date_time = models.DateTimeField(auto_now_add=True)
+#	category = models.CharField(max_length=50, blank=True)
+#	tag = models.ManyToManyField(Tag, blank=True)
+#	date_time = models.DateTimeField(auto_now_add=True)
 	content = models.TextField(blank=True, null=True)
 
-	def get_absolute_url(self):
-		path = reverse('detail', kwargs={'id': self.id})
-		return "http://127.0.0.1:8000%s" % path
+#	def get_absolute_url(self):
+#		path = reverse('detail', kwargs={'id': self.id})
+#		return "http://127.0.0.1:8000%s" % path
 
 	def __str__(self):
 		return self.title.encode('utf-8')
 
-	class Meta:
-		ordering = ['-date_time']
+#	class Meta:
+#		ordering = ['-date_time']
+class Comment(models.Model):
+    Article = models.ForeignKey(Article, related_name='article_comment')
+    detail = models.TextField()
 
 
 class Publisher(models.Model):

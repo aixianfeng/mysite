@@ -20,5 +20,9 @@ urlpatterns = patterns('',
 	url(r'^time/$', current_datetime),
 	url(r'^time/plus/(\d{1,2})/$', hours_ahead),
 	
+	url(r'^add/$', 'mysite.views.add'),
+	url(r'^comment/add/$', 'mysite.views.comment_add'),
+	url(r'^list/$', 'mysite.views.list'),
+	url(r'^view/(?P<id>[\d]+)$', 'mysite.views.view'),
 	url(r'^$', 'mysite.views.home', name='home'),
 )
